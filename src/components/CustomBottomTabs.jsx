@@ -113,6 +113,7 @@ export default CustomBottomTabs;
 
 const styles = StyleSheet.create({
   bottomTabsWrapper: {
+    backgroundColor: '#fff',
     width: '100%',
     flexDirection: 'row',
     position: 'absolute',
