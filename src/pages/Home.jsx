@@ -8,7 +8,8 @@ import {
   FlatList,
   Dimensions,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
+
 import logo from '../assets/icons/logo.png';
 import heart from '../assets/icons/heart.png';
 import comment from '../assets/icons/comment.png';
@@ -16,6 +17,8 @@ import more from '../assets/icons/more.png';
 
 import dummy_person from '../static/dummy_person';
 import dummy_feed from '../static/dummy_feed';
+
+import CommentModal from '../components/CommentModal';
 
 const {width, height} = Dimensions.get('window');
 
@@ -72,6 +75,7 @@ const Header = () => {
 };
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const renderFeeds = ({item, index}) => {
     return (
       <View style={styles.feedContainer}>
@@ -97,7 +101,7 @@ const Home = () => {
             <TouchableOpacity>
               <Image source={heart} style={styles.icon} />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => setIsVisible(!isVisible)}>
               <Image source={comment} style={styles.icon} />
             </TouchableOpacity>
           </View>
@@ -126,6 +130,7 @@ const Home = () => {
           ListHeaderComponent={() => <Header />} //header도 스크롤하면 내려감
           showsVerticalScrollIndicator={false}
         />
+        <CommentModal isVisible={isVisible} setIsVisible={setIsVisible} />
       </View>
     </SafeAreaView>
   );
