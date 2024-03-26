@@ -4,7 +4,7 @@ const dummy_feed = [
     name: 'kim',
     profileImage: 'https://avatar.iran.liara.run/public',
     feedImg: [
-      'https://picsum.photos/id/237/400/400',
+      'https://picsum.photos/400/400',
       'https://picsum.photos/id/237/400/400',
       'https://picsum.photos/id/237/400/400',
       'https://picsum.photos/id/237/400/400',
@@ -18,7 +18,7 @@ const dummy_feed = [
     name: 'kim',
     profileImage: 'https://avatar.iran.liara.run/public',
     feedImg: [
-      'https://picsum.photos/id/237/400/400',
+      'https://picsum.photos/400/400',
       'https://picsum.photos/id/237/400/400',
       'https://picsum.photos/id/237/400/400',
       'https://picsum.photos/id/237/400/400',
