@@ -18,7 +18,7 @@ import dummy_search from '../static/dummy_search';
 
 const {width, height} = Dimensions.get('window');
 
-const Search = () => {
+const Search = ({navigation}) => {
   const [keyword, setKeyword] = useState('');
 
   const renderSearch = ({item}) => {
@@ -34,22 +34,14 @@ const Search = () => {
       <View style={styles.container}>
         {/* searchWrapper */}
         <View style={{height: 68, backgroundColor: '#fff'}}>
-          <View style={styles.searchWrapper}>
+          <TouchableOpacity
+            style={styles.searchWrapper}
+            onPress={() => navigation.navigate('SearchList')}>
             <TouchableOpacity style={styles.touchIconStyle}>
               <Image source={searchIcon} style={styles.icon} />
             </TouchableOpacity>
-            <TextInput
-              placeholder="검색어를 입력하세요"
-              placeholderTextColor={'#828282'}
-              spellCheck={false}
-              autoCorrect={false}
-              autoCapitalize="none"
-              value={keyword}
-              onChangeText={text => setKeyword(text)}
-              allowFontScaling={false}
-              style={styles.inputStyle}
-            />
-          </View>
+            <Text style={styles.inputStyle}>검색어를 입력하세요</Text>
+          </TouchableOpacity>
         </View>
         {/* imageList */}
         <FlatList
@@ -80,7 +72,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginVertical: 12,
     borderRadius: 4,
-    borderWidth: 1,
+    // borderWidth: 1,
   },
   icon: {
     width: 24,
