@@ -4,12 +4,16 @@
 
 react-navigation  
 라우팅, 탑바,바텀바 구현  
+   
 react-native-modal  
 댓글창 모달 구현  
+   
 react-native-video  
 쇼츠 구현  
+   
 react-native-camera-roll
 카메라 기능 구현
+   
 
 ## 관련 블로그 글
 
