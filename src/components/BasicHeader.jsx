@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingVertical: 18,
+    paddingVertical: 8,
     borderBottomWidth: 1,
     borderBottomColor: '#eaeaea',
   },
   backButton: {
-    width: 18,
-    height: 18,
+    width: 40,
+    height: 40,
   },
   headerTitle: {
     fontSize: 16,

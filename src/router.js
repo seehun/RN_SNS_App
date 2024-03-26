@@ -10,6 +10,8 @@ import Add from './pages/Add';
 import Shorts from './pages/Shorts';
 import Person from './pages/Person';
 import SearchList from './pages/SearchList';
+import Follower from './pages/Follower';
+import Following from './pages/Following';
 
 import CustomBottomTabs from './components/CustomBottomTabs';
 
@@ -52,6 +54,8 @@ const Router = () => {
       }}>
       <Stack.Screen name="Splash" component={Splash} />
       <Stack.Screen name="MainTab" component={MainTab} />
+      <Stack.Screen name="Follower" component={Follower} />
+      <Stack.Screen name="Following" component={Following} />
     </Stack.Navigator>
   );
 };
