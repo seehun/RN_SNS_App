@@ -11,7 +11,7 @@ react-native-modal
 react-native-video  
 쇼츠 구현  
    
-react-native-camera-roll
+react-native-camera-roll   
 카메라 기능 구현
    
 
